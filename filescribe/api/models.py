@@ -15,7 +15,7 @@ class FS_UserManager(BaseUserManager):
         email = self.normalize_email(email)
         user = self.model(email=email, username=username)
         user.set_password(password)
-        user.save(using=self._db)
+        user.save()
         return user
 
     # create super user
@@ -23,7 +23,8 @@ class FS_UserManager(BaseUserManager):
         user = self.create_user(email, username, password)
         user.is_admin = True
         user.is_superuser = True
-        user.save(using=self._db)
+        user.save()
+        return user
         
 
 
