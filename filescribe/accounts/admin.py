@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from api.models import FS_User
+from accounts.models import FS_User
 
 
 class FS_UserAdmin(UserAdmin):

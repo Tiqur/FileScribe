@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0003_fs_user_uuid'),
+        ('accounts', '0003_fs_user_uuid'),
     ]
 
     operations = [
